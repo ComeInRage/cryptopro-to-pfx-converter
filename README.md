@@ -7,8 +7,8 @@ This script introduces automation into process of conversion CryptoPRO CSP 5.0 c
 ## II. Dependencies
 
 Before you download script you have to download and install:
-*[OpenSSL](https://www.openssl.org/)
-*[get-cpcert](https://github.com/kov-serg/get-cpcert)
+- [OpenSSL](https://www.openssl.org/)
+- [get-cpcert](https://github.com/kov-serg/get-cpcert)
 Also you have to install GOST engine support to your openssl:
 ```shell
 sudo apt install libengine-gost-openssl1.0
