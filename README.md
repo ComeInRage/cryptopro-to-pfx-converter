@@ -17,7 +17,7 @@ sudo apt install libengine-gost-openssl1.0
 
 ### Notice:
 
-Its preferable to download get-cpcert and start prepare.sh script, it will download and update all dependencies.
+> Its preferable to download get-cpcert and start prepare.sh script, it will download and update all dependencies.
 
 Script tested on Ubuntu 14.04 LTS, OpenSSL 1.1.1
 
