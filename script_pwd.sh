@@ -18,14 +18,16 @@ do
 
 	if [ -d $file ]; then
 
-		pemfile=$pems${file##*/}.pem
-		resfile=$results${file##*/}.pfx
+		pemfile=$pems${file##*/}
+		resfile=$results${file##*/}
+
+		pemfile=${pemfile%.*}.pem
+		resfile=${resfile%.*}.pfx
 		
-		echo Enter the password to ${file##*/} container:
-		read pass
+		read -sp "Enter the password to ${file##*/} container: " pass
 
 		cd $getcp
-		./get-cpcert $certs $pass > $pemfile
+		./get-cpcert $file $pass > $pemfile
 		
 		openssl pkcs12 -engine gost -export -in $pemfile -out $resfile -keypbe gost89 -certpbe gost89 -macalg md_gost12_512
 
